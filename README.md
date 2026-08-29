@@ -65,7 +65,7 @@ C004,Aygun Ozdemir,02-11-1985,,Baku,Silver
 C005,Rashad Aliyev,31.07.1992,+994774445566,Mingachevir,N/A
 ```
 
-> **Qeyd:** Linux əmrləri ilə əsas temizlik bu raw faylların direkt casestudy qovluğunda olan versiyasına tətbiq edilir. Sonradan məlumatlar dataset qovluğuna atom tez kopyalanır.
+> **Qeyd:** Linux əmrləri ilə əsas temizlik bu raw faylların birbaşa casestudy qovluğunda olan versiyasına tətbiq edilir. Sonradan məlumatlar dataset qovluğuna atılıb oxunaqlılıq nəzərə alınaraq. İstifadə zamanı əmrləri icra etmək üçün faylları qovlugdan çıxarmağınız tövsiyə olunur
 
 ---
 
@@ -227,7 +227,7 @@ services:
 volumes: {}
 ```
 
-#### **Açıklamalar:**
+#### **İzahı:**
 
 | Parametr | Izahat |
 |----------|--------|
@@ -691,27 +691,20 @@ Metabase `docker-compose.yaml` vasitəsilə PostgreSQL-ə qoşulur:
 
 ---
 
-## 🚀 Pipeline Icrasının Addımları
+## 🚀 Təmizlənmiş dataset ilə pipeline icrasının addımları
 
 ### **1. Docker Konteynerlərini Başlatmaq**
-```bash
-docker-compose up -d
-```
+
 
 ### **2. PostgreSQL-ə Qoşulmaq**
-```bash
-psql -h localhost -U postgres -p 5432
-```
+
 
 ### **3. SQL Skriptini Icra Etmək**
-```bash
-psql -h localhost -U postgres -p 5432 < postgres.sql
-```
 
-### **4. Metabase-ə Girişi Etmək**
-```
-http://localhost:3000
-```
+
+### **4. Metabase-ə Girişi Etmək və Dashboardlar Qurmaq**
+
+### **5. Yekun Dashboardları və nəticələrini analiz/təqdim etmək**
 
 ---
 
@@ -728,16 +721,8 @@ http://localhost:3000
 
 ---
 
-## 📖 Əlavə Resurslar
 
-- **PostgreSQL Documentation:** https://www.postgresql.org/docs/
-- **Metabase Documentation:** https://www.metabase.com/learn/
-- **Data Warehouse Design:** Ralph Kimball Star Schema Pattern
-- **SCD Types:** Slowly Changing Dimensions
-
----
 
 **Hazırlayan:** Mahammad Rasulov  
 **Tarix:** 2026-08-29  
 **Layihə Tipi:** Data Pipeline & Analytics  
-**Status:** ✅ Aktiv
