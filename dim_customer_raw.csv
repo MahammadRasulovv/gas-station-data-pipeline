@@ -1,0 +1,12 @@
+customer_id,full_name,birth_date,phone,city,loyalty_tier
+C001,Elnur Mammadov,1988-04-12,+994501112233,Baku,Gold
+C002,Sevinc Chiragova,1995-09-12,+994552223344,Ganja,Silver
+C003,Tural Huseynov,1990-01-23,+994703334455,Sumgait,Bronze
+C004,Aygun Ozdemir,1985-11-02,,Baku,Silver
+C005,Rashad Aliyev,1992-07-31,+994774445566,Mingachevir,
+C006,Nergiz Aliyeva,2000-06-30,+994515556677,Baku,Bronze
+C002,Sevinc Chiragova,1995-09-12,+994552223344,Ganja,Gold
+C007,  Kamran Quliyev ,1979-03-18,+994501110000,Lankaran,Silver
+C008,Leyla Mammadova,1998-12-31,+994503339900,Baku,Gold
+C009,Farid Bagirov,1994-04-01,+994708887766,Baku,Bronze
+C010,Gunel Isayeva,1993-08-09,+994519998877,Shaki,Silver

@@ -1,0 +1,5 @@
+payment_id,payment_name
+PM01,Cash
+PM02,Card
+PM03,Loyalty Points
+PM04,Mobile App

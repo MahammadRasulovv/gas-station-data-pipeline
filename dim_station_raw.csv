@@ -1,0 +1,7 @@
+station_id,station_name,city,region,opened_date
+S01,SOCAR 28 May,Baku,Baku,2010-05-01
+S02,socar Nizami,Baku,Baku,2012-08-15
+S03,SOCAR Ganja Central,Ganja,Ganja-Dashkasan,2015-03-20
+S04,SOCAR Sumgait North,Sumgait,Sumgait-Absheron,2011-11-11
+S05,SOCAR Mingachevir,Mingachevir,Mingachevir-Yevlakh,2018-07-07
+S06,SOCAR Shaki Old Town,Shaki,Shaki-Zaqatala,2019-09-01

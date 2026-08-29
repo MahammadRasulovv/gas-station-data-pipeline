@@ -1,0 +1,43 @@
+mahammad@mahammad:~/casestudy$ sed -i "s/\./-/g" dim_customer_raw.csv
+Bu əmrlə faylın içində olan bütün nöqtə (.) simvollarını tire (-) simvolu ilə əvəz etdim.
+
+mahammad@mahammad:~/casestudy$ sed -i -E 's/([0-9]{2})-([0-9]{2})-([0-9]{4})/\3-\2-\1/g' dim_customer_raw.csv
+Nöqtələri tireyə çevirdikdən sonra gün-ay-il formatında qalan tarixləri bu əmrlə il-ay-gün formatına gətirdim.(Postgres Data type-na görə)
+
+mahammad@mahammad:~/casestudy$ sed -i 's/,N\/A$/,/g' dim_customer_raw.csv
+Sətrin sonundakı ,N/A dəyərlərini silərək yerini boş saxladım (yəni vergüllə əvəz etdim).
+
+mahammad@mahammad:~/casestudy$ cat dim_customer_raw.csv
+customer_id,full_name,birth_date,phone,city,loyalty_tier
+C001,Elnur Mammadov,1988-04-12,+994501112233,Baku,Gold
+C002,Sevinc Chiragova,1995-09-12,+994552223344,Ganja,Silver
+C003,Tural Huseynov,1990-01-23,+994703334455,Sumgait,Bronze
+C004,Aygun Ozdemir,1985-11-02,,Baku,Silver
+C005,Rashad Aliyev,1992-07-31,+994774445566,Mingachevir,
+C006,Nergiz Aliyeva,2000-06-30,+994515556677,Baku,Bronze
+C002,Sevinc Chiragova,1995-09-12,+994552223344,Ganja,Gold
+C007,Kamran Quliyev,1979-03-18,+994501110000,Lankaran,Silver
+C008,Leyla Mammadova,1998-12-31,+994503339900,Baku,Gold
+C009,Farid Bagirov,1994-04-01,+994708887766,Baku,Bronze
+C010,Gunel Isayeva,1993-08-09,+994519998877,Shaki,Silver
+
+mahammad@mahammad:~/casestudy$ sed -i "5d" dim_station_raw.csv
+Bu əmrlə dim_station_raw.csv faylından 5-ci sətri sildim.
+
+mahammad@mahammad:~/casestudy$ sed -i "s/Baku/Baku/gI" dim_station_raw.csv
+Fayldakı böyük-kiçik hərflə yazılmış bütün "baku", "BAKU" variasiyalarını standart "Baku" şəklinə gətirdim.
+
+mahammad@mahammad:~/casestudy$ sed -i "s/,,/,Sumgait,/" dim_station_raw.csv
+Fayldakı iki ardıcıl vergül (,,) arasında çatışmayan boş dəyərin yerine Sumgait yazdım.
+
+mahammad@mahammad:~/casestudy$ cat dim_station_raw.csv 
+station_id,station_name,city,region,opened_date
+S01,SOCAR 28 May,Baku,Baku,2010-05-01
+S02,socar Nizami,Baku,Baku,2012-08-15
+S03,SOCAR Ganja Central,Ganja,Ganja-Dashkasan,2015-03-20
+S04,SOCAR Sumgait North,Sumgait,Sumgait-Absheron,2011-11-11
+S05,SOCAR Mingachevir,Mingachevir,Mingachevir-Yevlakh,2018-07-07
+S06,SOCAR Shaki Old Town,Shaki,Shaki-Zaqatala,2019-09-01
+
+mahammad@mahammad:~/casestudy$ sed -i "s/\;/,/g" fact_sale_raw.csv
+fact_sale_raw.csv faylındakı bütün nöqtəli vergülləri (;) vergül (,) ilə əvəz edərək faylı standart CSV formatına gətirdim.

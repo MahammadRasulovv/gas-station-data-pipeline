@@ -1,0 +1,9 @@
+product_id,product_name,category,unit
+P01,AI-92,Fuel,Litre
+P02,AI-95,Fuel,Litre
+P03,AI-98,Fuel,Litre
+P04,Diesel,Fuel,Litre
+P05,Motor Oil 5W-30,Shop,Piece
+P06,Coffee,Shop,Cup
+P07,Car Wash Voucher,Service,Piece
+P08,Diesel Premium,Fuel,Litre
